@@ -1,30 +1,29 @@
-// app/index.tsx
-import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { useRouter } from 'expo-router';
-import { styles } from '../styles/login-style';
+import { useState } from 'react'
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native'
+import { useRouter } from 'expo-router'
+import { styles } from '../styles/login-style'
 
 export default function LoginScreen() {
-  const router = useRouter();
+  const router = useRouter()
 
   //Estados para armazenar os valores de login
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   //Função para validar o login
   const handleLogin = () => {
     //Verifica se todos os campos foram preenchidos
     if (!username || !password) {
-      alert('Preencha todos os campos!');
-      return;
+      alert('Preencha todos os campos!')
+      return
     }
     //Verifica se as credenciais estão corretas
     if (username === 'Admin' && password === 'Admin') {
-      router.push('/products');
+      router.push('/products')
     } else {
-      alert('Usuário ou senha inválidos');
+      alert('Usuário ou senha inválidos')
     }
-  };
+  }
 
   return (
     <View style={styles.container}>
@@ -55,5 +54,5 @@ export default function LoginScreen() {
             </TouchableOpacity>
         </View>
     </View>
-  );
+  )
 }

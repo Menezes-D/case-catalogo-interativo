@@ -1,9 +1,8 @@
-// app/products.tsx
-import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image, ActivityIndicator } from 'react-native';
-import { useRouter } from 'expo-router';
-import axios from 'axios';
-import { styles } from '../styles/products-style';
+import React, { useEffect, useState } from 'react'
+import { View, Text, FlatList, TouchableOpacity, Image, ActivityIndicator } from 'react-native'
+import { useRouter } from 'expo-router'
+import axios from 'axios'
+import { styles } from '../styles/products-style'
 
 //Tipo de produtos a serem carregados
 type Product = {
@@ -12,7 +11,7 @@ type Product = {
   price: number;
   thumbnail: string;
   category: string;
-};
+}
 //Constantes para representar as categorias que existem na API
 const CATEGORIES = {
   MASCULINO: 'mens-shirts',
@@ -130,5 +129,5 @@ export default function ProductsScreen() {
         </TouchableOpacity>
       </View>
     </View>
-  );
+  )
 }
