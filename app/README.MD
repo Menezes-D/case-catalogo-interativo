@@ -59,12 +59,12 @@ Este projeto é um aplicativo móvel de catálogo de produtos, desenvolvido com 
 
 4. Execute no dispositivo ou emulador:
 
-No celular, abra o app Expo Go e escaneie o QR Code exibido.
+- No celular, abra o app Expo Go e escaneie o QR Code exibido.
+- No Terminal, aperte W para abrir o navegador.
+- No emulador, selecione rodar no Android/iOS pelo menu do Expo.
 
-No emulador, selecione rodar no Android/iOS pelo menu do Expo.
 
-
-Estrutura do projeto
+5. Estrutura do projeto
     ```bash
     /app
     ├── index.tsx          # Tela de login
@@ -76,28 +76,27 @@ Estrutura do projeto
     ├── product-details-style.ts
 
 
-  -> Como funciona a navegação <-
-. Login com usuário e senha fixos (Admin / Admin).
-. Tela de produtos com abas para categorias Masculino e Feminino.
-. Clicar no produto leva para a tela de detalhes.
-. Na tela de detalhes, botões para voltar à lista (Home) ou fazer logout.
+## Como funciona a navegação <-
+- Login com usuário e senha fixos (Admin / Admin).
+- Tela de produtos com abas para categorias Masculino e Feminino.
+- Clicar no produto leva para a tela de detalhes.
+- Na tela de detalhes, botões para voltar à lista (Home) ou fazer logout.
 
 
--> Consumo da API <-
+## Consumo da API <-
 Listagem por categoria:
-https://dummyjson.com/products/category/mens-shirts
-https://dummyjson.com/products/category/womens-dresses
-
+- https://dummyjson.com/products/category/mens-shirts
+- https://dummyjson.com/products/category/womens-dresses
 
 Detalhes do produto:
-https://dummyjson.com/products/{id}
+- https://dummyjson.com/products/{id}
 
 
 
--> Conexão com os conceitos aprendidos <-
+## Conexão com os conceitos aprendidos <-
 Este projeto integra os seguintes conceitos:
-    . Consumo de APIs REST com Axios em React Native.
-    . Gerenciamento de estado e efeitos colaterais com React Hooks (useState, useEffect).
-    . Navegação baseada em rotas dinâmicas com expo-router.
-    . Validação simples e controle de fluxo para melhorar UX.
-    . Estilização responsiva com StyleSheet.
+- Consumo de APIs REST com Axios em React Native.
+- Gerenciamento de estado e efeitos colaterais com React Hooks (useState, useEffect).
+- Navegação baseada em rotas dinâmicas com expo-router.
+- Validação simples e controle de fluxo para melhorar UX.
+- Estilização responsiva com StyleSheet.
