@@ -53,9 +53,9 @@ Este projeto é um aplicativo móvel de catálogo de produtos, desenvolvido com 
 3. Inicie o Expo:
 
     ```bash
-    npm start
+    npm run start
     # ou
-    expo start
+    npx expo start
 
 4. Execute no dispositivo ou emulador:
 
