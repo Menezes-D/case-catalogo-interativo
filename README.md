@@ -1,50 +1,101 @@
-# Welcome to your Expo app 👋
+# Catálogo Interativo - React Native + Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descrição
 
-## Get started
+Este projeto é um aplicativo móvel de catálogo de produtos, desenvolvido com React Native e Expo, consumindo uma API REST pública para exibir produtos masculinos e femininos. O app conta com funcionalidades de login simples, navegação entre telas, e exibição de detalhes dos produtos.
 
-1. Install dependencies
+---
+
+## Funcionalidades
+
+- Tela de login com validação básica.
+- Abas para seleção de categoria (Masculino / Feminino).
+- Listagem dos produtos consumidos da API [dummyjson.com](https://dummyjson.com/).
+- Tela de detalhes do produto com imagem, descrição e preço.
+- Botões de navegação: Home (voltar para a lista) e Logout (voltar para login).
+- Navegação usando `expo-router`.
+
+---
+
+## Tecnologias usadas
+
+- React Native
+- Expo
+- Axios (para consumo da API REST)
+- TypeScript
+- Expo Router (para navegação)
+
+---
+
+## Pré-requisitos
+
+- Node.js (versão LTS recomendada)
+- Axios - (npm install axios)
+- Emulador Android/iOS ou dispositivo físico com Expo Go instalado
+- Navegador
+
+---
+
+## Como executar o projeto
+
+1. Clone o repositório:
 
    ```bash
-   npm install
-   ```
+   git clone https://github.com/seu-usuario/catalogo-interativo.git
+   cd catalogo-interativo
 
-2. Start the app
+2. Instale as dependências:
 
-   ```bash
-   npx expo start
-   ```
+    ```bash
+    npm install
 
-In the output, you'll find options to open the app in a
+3. Inicie o Expo:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+    ```bash
+    npm run start
+    # ou
+    npx expo start
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. Execute no dispositivo ou emulador:
 
-## Get a fresh project
+- No celular, abra o app Expo Go e escaneie o QR Code exibido.
+- No Terminal, aperte W para abrir o navegador.
+- No emulador, selecione rodar no Android/iOS pelo menu do Expo.
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+5. Estrutura do projeto
+    ```bash
+    /app
+    ├── index.tsx          # Tela de login
+    ├── products.tsx       # Tela de listagem de produtos
+    ├── products/[id].tsx  # Tela de detalhes do produto
+    /styles
+    ├── login-style.ts
+    ├── products-style.ts
+    ├── product-details-style.ts
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+## Como funciona a navegação <-
+- Login com usuário e senha fixos (Admin / Admin).
+- Tela de produtos com abas para categorias Masculino e Feminino.
+- Clicar no produto leva para a tela de detalhes.
+- Na tela de detalhes, botões para voltar à lista (Home) ou fazer logout.
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Consumo da API <-
+Listagem por categoria:
+- https://dummyjson.com/products/category/mens-shirts
+- https://dummyjson.com/products/category/womens-dresses
 
-## Join the community
+Detalhes do produto:
+- https://dummyjson.com/products/{id}
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Conexão com os conceitos aprendidos <-
+Este projeto integra os seguintes conceitos:
+- Consumo de APIs REST com Axios em React Native.
+- Gerenciamento de estado e efeitos colaterais com React Hooks (useState, useEffect).
+- Navegação baseada em rotas dinâmicas com expo-router.
+- Validação simples e controle de fluxo para melhorar UX.
+- Estilização responsiva com StyleSheet.
