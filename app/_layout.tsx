@@ -18,10 +18,14 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+    <ThemeProvider value={DefaultTheme}>
+      <Stack 
+       screenOptions={{
+          headerShown: false, // Remove cabeçalho padrão do Stack
+        }}
+      >
+        <Stack.Screen name="index"/>
+        <Stack.Screen name="products"/>
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
