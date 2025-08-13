@@ -41,7 +41,7 @@ Este projeto é um aplicativo móvel de catálogo de produtos, desenvolvido com 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/catalogo-interativo.git
+   git clone https://github.com/Menezes-D/case-catalogo-interativo.git
    cd catalogo-interativo
 
 2. Instale as dependências:
